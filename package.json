@@ -1,0 +1,37 @@
+{
+	"name": "node-starter",
+	"version": "0.1.0",
+	"main": "src/index.ts",
+	"scripts": {
+		"server:watch": "tsup --env.NODE_ENV dev",
+		"server:run": "nodemon build/server.js --legacy-watch",
+		"start": "concurrently -n BUILD,SERVER -c magenta,cyan \"npm run server:watch\" \"npm run server:run\"",
+		"build": "tsup",
+		"typecheck": "tsc --noEmit -p tsconfig.json",
+		"test": "vitest run",
+		"test:watch": "vitest",
+		"prettier:write": "npx prettier . --write",
+		"clean": "npm run rm:node_modules && npm run rm:builds",
+		"rm:node_modules": "node -e \"require('node:fs').rmSync('node_modules',{recursive:true,force:true})\"",
+		"rm:builds": "node -e \"require('node:fs').rmSync('build',{recursive:true,force:true})\"",
+		"prepare": "husky"
+	},
+	"dependencies": {
+		"dotenv": "^17.2.3"
+	},
+	"devDependencies": {
+		"@types/core-js": "^2.5.8",
+		"@types/node": "^25.2.0",
+		"concurrently": "^9.2.1",
+		"husky": "9.1.7",
+		"nodemon": "^3.1.11",
+		"prettier": "3.8.1",
+		"tsup": "^8.5.1",
+		"typescript": "^5.9.3",
+		"vitest": "^5.0.0"
+	},
+	"engines": {
+		"node": ">=26",
+		"npm": ">=11"
+	}
+}

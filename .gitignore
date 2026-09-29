@@ -1,0 +1,6 @@
+#.vscode/settings.json
+node_modules/
+#.env
+build/
+**/package-lock.json
+!package-lock.json
