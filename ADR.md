@@ -12,4 +12,3 @@ Format per entry: Context → Decision → Consequences (the trade-off, good and
 Alternatives considered.
 
 ---
-

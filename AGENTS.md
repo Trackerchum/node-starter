@@ -4,7 +4,7 @@ Guidance for AI agents working in this repository.
 
 ## Project
 
-node-starter - a starter for a  node project:
+node-starter - a starter for a node project:
 
 - **Backend**: TypeScript node app in `./`
 
@@ -36,9 +36,9 @@ Prefer matching the existing stack and folder layout once they exist. Do not int
 - Prefer discriminated unions and exhaustive checks for domain states over boolean flag soup.
 - Handle errors intentionally: typed/domain errors on the backend, user-safe messaging on the frontend. No empty `catch` blocks.
 - Document with JSDoc when you write code:
-  - **Helpers**: exported utility/helper functions, static helper methods, and non-trivial module-private helpers (utils, shared helpers, validation helpers, pure formatters). Include a short description plus `@param` / `@returns` (and `@throws` when relevant).
-  - **Types**: exported and domain `type` / `interface` declarations (including API DTOs, models, and non-trivial module-private domain shapes). Put a short description on the type itself and on each property/member. For string unions, document the meaning of each variant on the type.
-  - Keep JSDoc accurate when you change behavior, signatures, fields, or meaning — update or remove stale docs in the same change. React components and typical component-prop types do not need JSDoc by default.
+    - **Helpers**: exported utility/helper functions, static helper methods, and non-trivial module-private helpers (utils, shared helpers, validation helpers, pure formatters). Include a short description plus `@param` / `@returns` (and `@throws` when relevant).
+    - **Types**: exported and domain `type` / `interface` declarations (including API DTOs, models, and non-trivial module-private domain shapes). Put a short description on the type itself and on each property/member. For string unions, document the meaning of each variant on the type.
+    - Keep JSDoc accurate when you change behavior, signatures, fields, or meaning — update or remove stale docs in the same change. React components and typical component-prop types do not need JSDoc by default.
 
 ### Type file organization
 
@@ -79,7 +79,7 @@ Significant technical decisions are logged in [`ADR.md`](./ADR.md) at the repo r
 - Follow the existing format and numbering: the next free `ADR-NNN`, **Status: Accepted**, appended at the bottom under the last entry (before "Open questions"). Keep the entry self-contained and cross-reference related ADRs by number.
 - When a new decision reverses or replaces an older one, set the old entry's Status to **Superseded** (or **Deprecated**) and link the two — do not rewrite the superseded decision's reasoning.
 - Keep the "Open questions / decisions not yet made" list current: remove an item when its ADR lands, add one when a decision is consciously deferred.
-- This is in addition to the README / `AGENTS.md` updates below, not a replacement — `ADR.md` records *why* a choice was made; the READMEs and `AGENTS.md` record *what* the setup is and *how* to run it. Update all of them in the same change.
+- This is in addition to the README / `AGENTS.md` updates below, not a replacement — `ADR.md` records _why_ a choice was made; the READMEs and `AGENTS.md` record _what_ the setup is and _how_ to run it. Update all of them in the same change.
 
 ## Version control
 
@@ -91,9 +91,9 @@ Significant technical decisions are logged in [`ADR.md`](./ADR.md) at the repo r
 - Match existing naming, imports, and formatting.
 - Limit diffs to the task; no drive-by refactors.
 - Keep the docs accurate in the same change as the code. When you change commands, ports, env vars, stack choices, project purpose, endpoints, or how to run something, update every doc that describes it. Prefer short, clear wording; avoid inventing detail that is not yet true.
-  - ADRs: [`ADR.md`](./ADR.md) — when the change is an architecturally significant decision (new/replaced/dropped technology or service, major dependency, cross-cutting pattern, build/dev/deploy topology), record it there per [Architecture decision records](#architecture-decision-records).
-  - READMEs: the root [`README.md`](./README.md) and each package README — Update the root README for anything cross-cutting (stack, layout, running the full stack, shared env story); update the package README for anything specific to that package. A new package gets its own README following the existing ones.
-  - AGENTS.md files: the root [`AGENTS.md`](./AGENTS.md). Keep guidance here consistent with what the READMEs describe; when a rule stated here stops matching reality, fix it rather than leaving it stale.
+    - ADRs: [`ADR.md`](./ADR.md) — when the change is an architecturally significant decision (new/replaced/dropped technology or service, major dependency, cross-cutting pattern, build/dev/deploy topology), record it there per [Architecture decision records](#architecture-decision-records).
+    - READMEs: the root [`README.md`](./README.md) and each package README — Update the root README for anything cross-cutting (stack, layout, running the full stack, shared env story); update the package README for anything specific to that package. A new package gets its own README following the existing ones.
+    - AGENTS.md files: the root [`AGENTS.md`](./AGENTS.md). Keep guidance here consistent with what the READMEs describe; when a rule stated here stops matching reality, fix it rather than leaving it stale.
 - Update Compose docs the same way when Compose workflows change.
 - When changing helpers, types, or their properties/signatures, update the matching JSDoc in the same change (see TypeScript standards).
 - Do not commit `.env`, credentials, or generated secrets.

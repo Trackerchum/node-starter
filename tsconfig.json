@@ -1,35 +1,26 @@
 {
-    "compilerOptions": {
-        "module": "esnext",
-        "target": "ES6",
-        "lib": [
-            "es2021",
-            "dom"
-        ],
-        "sourceMap": false,
-        "allowJs": false,
-        "moduleResolution": "node",
-        "outDir": "src",
-        "forceConsistentCasingInFileNames": true,
-        "noImplicitReturns": true,
-        "noImplicitThis": true,
-        "noImplicitAny": true,
-        "removeComments": true,
-        "skipLibCheck": true,
-        "types": [
-            "node",
-            "vitest/globals"
-        ],
-        "noUnusedLocals": true,
-        "resolveJsonModule": true,
-        "allowSyntheticDefaultImports": true,
-        "allowImportingTsExtensions": true,
-        "strict": true,
-        "isolatedModules": false,
-        "noEmit": false
-    },
-    "exclude": [
-        "node_modules/*",
-        "/config"
-    ]
+	"compilerOptions": {
+		"module": "esnext",
+		"target": "ES6",
+		"lib": ["es2021", "dom"],
+		"sourceMap": false,
+		"allowJs": false,
+		"moduleResolution": "node",
+		"outDir": "src",
+		"forceConsistentCasingInFileNames": true,
+		"noImplicitReturns": true,
+		"noImplicitThis": true,
+		"noImplicitAny": true,
+		"removeComments": true,
+		"skipLibCheck": true,
+		"types": ["node", "vitest/globals"],
+		"noUnusedLocals": true,
+		"resolveJsonModule": true,
+		"allowSyntheticDefaultImports": true,
+		"allowImportingTsExtensions": true,
+		"strict": true,
+		"isolatedModules": false,
+		"noEmit": false
+	},
+	"exclude": ["node_modules/*", "/config"]
 }

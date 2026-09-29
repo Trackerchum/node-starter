@@ -10,6 +10,7 @@
 		"typecheck": "tsc --noEmit -p tsconfig.json",
 		"test": "vitest run",
 		"test:watch": "vitest",
+		"prettier:check": "prettier . --check",
 		"prettier:write": "npx prettier . --write",
 		"clean": "npm run rm:node_modules && npm run rm:builds",
 		"rm:node_modules": "node -e \"require('node:fs').rmSync('node_modules',{recursive:true,force:true})\"",

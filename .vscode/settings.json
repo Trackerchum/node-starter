@@ -1,6 +1,6 @@
 {
-    "workbench.tree.indent": 20,
-    "explorer.autoReveal": false,
-    "scm.autoReveal": false,
-    "editor.minimap.enabled": false
+	"workbench.tree.indent": 20,
+	"explorer.autoReveal": false,
+	"scm.autoReveal": false,
+	"editor.minimap.enabled": false
 }
